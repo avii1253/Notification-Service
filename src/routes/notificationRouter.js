@@ -7,7 +7,7 @@ import {
 
 const notificationRouter = express.Router();
 
-console.log("✅ Router initialized");
+console.log("Router initialized");
 
 // Route: POST /notifications
 notificationRouter.post("/", sendNotificationC);
