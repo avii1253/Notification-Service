@@ -142,8 +142,14 @@ A lightweight and modular notification service built using Node.js, supporting E
 
 > Email sending assumes a valid Gmail App Password setup.
 
+> Best Working on local machine and handleing all post and get requests.
+
+> Ensure docker is installed in your local machine otherwise redis will not function.
 
 ## Testing:
 
 > Use Postman to test endpoints
     
+## Deployed URL Link
+    https://notification-service-1k50.onrender.com
+> This url is listening to the requests but redis cloud is not connected so it will not send responses.
