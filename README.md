@@ -116,22 +116,23 @@ A lightweight and modular notification service built using Node.js, supporting E
 
 ## Project Structure:
 
-    .
-    ├── app.js
-    ├── server.js
-    ├── routes/
-    │   └── notificationRouter.js
-    ├── controllers/
-    │   └── notificationController.js
-    ├── services/
-    │   └── notificationServices.js
-    ├── queues/
-    │   └── notificationQueue.js
-    ├── models/
-    │   └── database.js
+    Notification-Service/
+    ├── src/
+    │   ├── app.js
+    │   ├── server.js
+    │   ├── routes/
+    │   │   └── notificationRouter.js
+    │   ├── controllers/
+    │   │   └── notificationController.js
+    │   ├── services/
+    │   │   └── notificationServices.js
+    │   ├── queues/
+    │   │   └── notificationQueue.js
+    │   └── models/
+    │       └── database.js
     ├── .env
+    ├── .gitignore
     └── README.md
-
 
 ## ASSUMPTIONS: 
 
