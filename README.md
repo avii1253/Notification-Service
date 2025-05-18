@@ -10,7 +10,7 @@ A lightweight and modular notification service built using Node.js, supporting E
 ### 1. Clone the Repo & Install Dependencies
 
     git clone https://github.com/avii1253/Notification-Service.git
-    cd <project-folder>
+    cd Notification-Service
     npm install
 
 ### 2. Set Up Redis (Required)
