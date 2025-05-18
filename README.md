@@ -1,17 +1,17 @@
-Notification Service Application
+# Notification Service Application
 
 A lightweight and modular notification service built using Node.js, supporting Email, SMS, and In-App notifications. Messages are handled asynchronously with Bull (Redis-based queue) and retry logic.
 
 
-Setup Instructions:
+## Setup Instructions:
 
-1. Clone the Repo & Install Dependencies
+###1. Clone the Repo & Install Dependencies
 
     git clone <your-repo-url>
     cd <project-folder>
     npm install
 
-2. Set Up Redis (Required)
+###2. Set Up Redis (Required)
 
     docker run --name redis -p 6379:6379 redis
 
