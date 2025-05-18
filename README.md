@@ -22,7 +22,7 @@ A lightweight and modular notification service built using Node.js, supporting E
     
     PORT=8080
     EMAIL_FROM=anandavinash1253@gmail.com
-    EMAIL_PASS=jqdy unxd qdfn aoak
+    EMAIL_PASS=**** **** **** ****
 
 ### 4. Start the Server
     npm run dev
