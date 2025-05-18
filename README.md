@@ -3,7 +3,8 @@
 A lightweight and modular notification service built using Node.js, supporting Email, SMS, and In-App notifications. Messages are handled asynchronously with Bull (Redis-based queue) and retry logic.
 
 ## Git Repository Link
-<br> > https://github.com/avii1253/Notification-Service.git <br>
+
+    https://github.com/avii1253/Notification-Service.git 
 
 ## Setup Instructions:
 
