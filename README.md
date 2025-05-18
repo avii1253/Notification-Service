@@ -22,7 +22,6 @@ A lightweight and modular notification service built using Node.js, supporting E
 
    > Create a .env file in the root directory and add the following:
 
-    
     PORT=8080
     EMAIL_FROM=anandavinash1253@gmail.com
     EMAIL_PASS=**** **** **** ****
@@ -35,8 +34,12 @@ A lightweight and modular notification service built using Node.js, supporting E
 
 ### 1. POST   /notifications
 
-  >  Queue a new notification to be processed.
+> Queue a new notification to be processed.
 
+> POST request on this URL.
+
+    localhost:8080/notifications/
+    
   >  Request Body:
 
     {
@@ -50,6 +53,7 @@ A lightweight and modular notification service built using Node.js, supporting E
     }
 
    > type: "email", "sms", or "in-app"
+
    > channelInfo: required for email and sms
 
    > Response:
