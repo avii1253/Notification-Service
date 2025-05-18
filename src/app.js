@@ -9,9 +9,9 @@ const app = express();
 app.use(morgan("combined"));
 app.use(express.json());
 
-console.log("✅ Entered app.js");
+console.log("Entered app.js");
 
-// Base path for notification routes
+
 app.use("/notifications", notificationRouter);
 
 export default app;
