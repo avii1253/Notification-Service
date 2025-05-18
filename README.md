@@ -5,34 +5,36 @@ A lightweight and modular notification service built using Node.js, supporting E
 
 ## Setup Instructions:
 
-###1. Clone the Repo & Install Dependencies
+### 1. Clone the Repo & Install Dependencies
 
-    git clone <your-repo-url>
+    git clone https://github.com/avii1253/Notification-Service.git
     cd <project-folder>
     npm install
 
-###2. Set Up Redis (Required)
+### 2. Set Up Redis (Required)
 
     docker run --name redis -p 6379:6379 redis
 
-3. Environment Variables
+### 3. Environment Variables
 
-    Create a .env file in the root directory and add the following:
+   > Create a .env file in the root directory and add the following:
+
+    
     PORT=8080
     EMAIL_FROM=anandavinash1253@gmail.com
     EMAIL_PASS=jqdy unxd qdfn aoak
 
-4. Start the Server
+### 4. Start the Server
     npm run dev
 
 
-API Endpoints:
+## API Endpoints:
 
-1. POST /notifications
+### 1. POST   /notifications
 
-    Queue a new notification to be processed.
+  >  Queue a new notification to be processed.
 
-    Request Body:
+  >  Request Body:
 
     {
         "userId": "191",
@@ -44,24 +46,24 @@ API Endpoints:
         }
     }
 
-    type: "email", "sms", or "in-app"
-    channelInfo: required for email and sms
+   > type: "email", "sms", or "in-app"
+   > channelInfo: required for email and sms
 
-    Response:
+   > Response:
 
     {
         "message": "Notification queued successfully"
     }
 
-2. GET /notifications/user/:userId
+### 2. GET   /notifications/user/:userId
 
-    Fetch all notifications sent to a specific user.
+   > Fetch all notifications sent to a specific user.
 
-    Example:
+   > Example:
 
-                GET http://localhost:8080/notifications/user/191
+   > > GET http://localhost:8080/notifications/user/191
 
-                Response:
+   > Response:
 
                 [
                     {
@@ -79,26 +81,33 @@ API Endpoints:
                 ]
 
     
-Notification Types: 
+## Notification Types: 
 
-    Type	Delivery Channel
-    email	Sent via Gmail (Nodemailer)
-    sms	Simulated via console.log
-    in-app	Simulated via console.log
-
-
-Queueing System:
-
-    This service uses Bull (built on Redis) for managing notification jobs asynchronously.
-    Retries: Configured with attempts: 3 and backoff: 5 seconds
-    Failure handling with retry + logging
-    Queue worker runs automatically from notificationQueue.js
-
-    Why Bull?
-    Simpler and well-documented than RabbitMQ/Kafka for this scale. Mentioned for clarity.
+   > Type	Delivery Channel <br>
+   
+   > email	Sent via Gmail (Nodemailer) <br>
+   
+   > sms	Simulated via console.log <br>
+   
+   > in-app	Simulated via console.log <br>
 
 
-Project Structure:
+## Queueing System:
+
+> This service uses Bull (built on Redis) for managing notification jobs asynchronously.
+
+> Retries: Configured with attempts: 3 and backoff: 5 seconds
+ 
+> Failure handling with retry + logging
+
+> Queue worker runs automatically from notificationQueue.js <br>
+
+> Why Bull?
+
+> > > Simpler and well-documented than RabbitMQ/Kafka for this scale. Mentioned for clarity.
+
+
+## Project Structure:
 
     .
     ├── app.js
@@ -117,16 +126,16 @@ Project Structure:
     └── README.md
 
 
-ASSUMPTIONS: 
+## ASSUMPTIONS: 
 
-    SMS and In-App delivery are simulated via logs.
+> SMS and In-App delivery are simulated via logs.
 
-    Notifications are stored in-memory (array in database.js) — this can be replaced with a database later.
+> Notifications are stored in-memory (array in database.js) — this can be replaced with a database later.
 
-    Email sending assumes a valid Gmail App Password setup.
+> Email sending assumes a valid Gmail App Password setup.
 
 
-Testing:
+## Testing:
 
-    Use Postman to test endpoints
+> Use Postman to test endpoints
     
