@@ -13,7 +13,7 @@ const getNotificationsByUser = (userId) => {
 const updateStatus = (nId, currStatus) => {
   const indexOfNotification = notifications.findIndex((ele) => ele.id === nId);
   if (indexOfNotification === -1) {
-    console.error(`❌ Notification with ID ${nId} not found`);
+    console.error(`Notification with ID ${nId} not found`);
     return;
   }
   notifications[indexOfNotification] = {
