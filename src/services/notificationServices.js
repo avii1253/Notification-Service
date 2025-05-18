@@ -23,7 +23,7 @@ const sendEmail = async (id, email, content) => {
     updateStatus(id, "sent");
   }
   catch (error) {
-    console.error(`❌ Failed to send email: ${error.message}`);
+    console.error(`Failed to send email: ${error.message}`);
     updateStatus(id, "failed");
     throw error;
   }
@@ -31,11 +31,11 @@ const sendEmail = async (id, email, content) => {
 };
 
 const sendSMS = (phone, content) => {
-  console.log(`📱 Sending SMS to ${phone}: ${content}`);
+  console.log(`Sending SMS to ${phone}: ${content}`);
 };
 
 const sendInApp = (userId, content) => {
-  console.log(`📲 In-app message to user ${userId}: ${content}`);
+  console.log(`In-app message to user ${userId}: ${content}`);
 };
 
 export { sendEmail, sendSMS, sendInApp };
